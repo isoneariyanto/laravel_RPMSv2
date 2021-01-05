@@ -1,0 +1,188 @@
+:root{
+	--primary: #111B54;
+	--light: #ffffff;
+	--grey: #efefef;
+	--darkblue: #01101D;
+}
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(191,201,202,0.8); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #99A3A4; 
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+	font-family: 'Muli',  sans-serif;
+	color: var(--primary);
+	box-sizing: border-box;
+}
+a:hover{
+	text-decoration: none;
+}
+/*.bg-primary{
+	background-color: var(--primary) !important;
+}*/
+.bg-mix{ background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0); }
+.bg-light{ background-color: var(--light) !important; }
+.bg-grey{ background-color: var(--grey) !important; }
+.bg-darkblue{ background-color: var(--darkblue) !important; }
+.btn-grey{ background-color: var(--grey) !important; }
+#sidebar-container{
+	min-height: 100vh;
+	background-color: var(--darkblue);
+	transition: 0.5s;
+	transition-property: margin-left;
+}
+
+#sidebar-container .sidebar-header{
+	padding: .875rem 1.25rem;
+}
+
+#sidebar-container .sidebar-menu{ 
+	width: 16rem;
+}
+#sidebar-container .sidebar-menu:hover{ 
+	height: 60%;
+	overflow-y: scroll;
+}
+.active{
+	border-left: 2px solid white;
+	background-color: #031C33;
+}
+
+label{
+	margin-top: 10px;
+}
+
+.srcButton{
+	margin-left: 20px;
+	border-radius: 6px;
+  width: 150px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.srcButton:focus {
+	width: 40%;
+	border-radius: 6px;
+	/*margin-right: 20px;*/
+}
+
+.sidebar-menu a:hover{
+	transition: 0.8s;
+	transition-property: background;
+	background-color: #01223F;
+}
+
+.avatar{
+	max-width: 35px;
+}
+
+#content{
+	height: 90vh; 
+	overflow-y: auto;
+}
+
+#content .options{
+	margin-top: -60px;
+	background-color: var(--grey) !important;
+	border-radius: 10px;
+	padding: 16px 0px; 
+}
+
+.stat{
+	border-right: 1px solid var(--gray);
+}
+
+#check{
+	display: none;
+}
+label #sidebarBtn{
+	z-index: 1;
+	color: #000;
+	cursor: pointer;
+	font-size: 35px;
+	transition: 0.5s;
+	transition-property: color;
+}
+label #sidebarBtn:hover{
+	color: red;
+}
+
+#check:checked ~ .d-flex #sidebar-container{
+	margin-left: -255.5px;
+}
+/*
+ Dropdown Content (Hidden by Default) 
+#myDropdown{
+  display: none;
+}*/
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+/*.show {display:block;}*/
+
+/*#check:checked ~ #sidebar-container .menu ul li > .dropdown-menu{
+	margin-left: -195px;
+}
+#check:checked ~ #sidebar-container > .dropdown-menu{
+	margin-left: -195px;
+}
+#check:checked ~ #sidebar-container .menu ul li a span{
+	display: none;
+}*/
+
+/*#check:checked ~  #sidebar-container .menu ul li a{
+	font-size: 20px;
+	margin-left: 195px;
+	width: 59px;
+}
+#check:checked ~  #sidebar-container .menu ul li > .dropdown-menu a{
+	font-size: 20px;
+	margin-left: 180px;
+	width: 59px;
+}*/
+.icon{
+	width: 25px;
+	text-align: center;
+}
+#icon1{
+	margin-left: 15px;
+}
+#icon2{ display: none; }
+
+@media screen and (max-height: 720px) {
+	/*#content{
+		overflow-y: auto;
+		height: 100vh;
+	}
+	#sidebar-container .sidebar-menu{ 
+		width: 16rem;
+		height: auto;
+		overflow:auto;
+	}*/
+	#sidebar-container .sidebar-menu:hover{ 
+		height: 30%;
+		overflow-y: scroll;
+	}
+
+}
